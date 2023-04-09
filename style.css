@@ -40,8 +40,8 @@ li {
   padding: 5px;
   background-color:  #001b44;
   color: white;
-  font-size: 1.5em;
-  line-height: 1.5;
+  font-size: 75%;
+  line-height: 90%;
 }
 
 li:before {
