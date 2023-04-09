@@ -1,38 +1,38 @@
 //Question-Answer Arrays
 var ShawnOne = 
-    ["What keyword allows you to set a variable in Javascript?",
-    "var", //CORRECT
-    "make",
-    "do",
-     "if"];
+    ["Seafood is really just...",
+    "Water Bugs", //CORRECT
+    "Ocean Trash",
+    "Alien Life",
+     "Overrated because of butter"];
 
 var JavaScriptTwo = 
-   ["What decade was Javascript invented?",
-    "1980's", 
-    "1990's", //CORRECT
-    "2000's",
-    "2010's"];
+   ["The most impressive Lupe Fiasco song is...",
+    "Till I Get There", 
+    "Mural", //CORRECT
+    "Dumb it Down",
+    "Words I Never Said"];
 
 var JavaScriptThree = 
-   ["which is NOT a loop name in Javascript?",
-    "for", 
-    "while",
-    "do",
-    "if"];//CORRECT
+   ["Which of the following situations would make Shawn most uncomfortable?",
+    "Everyone singing happy birthday to him at a restaurant", 
+    "A crying person looking for consolation by hugging him",
+    "A stranger trying to tickle him",
+    "Being on the jumbotron at a sporting event"];//CORRECT
 
 var JavaScriptFour =  
-    ["What superset of Javascript allows you to work with objects in local storage?",
-    "ECMA", 
-    "Typescript",
-    "W3",
-    "JSON",];//CORRECT
+    ["Which of these sports icon is just the absolute worst?",
+    "Tom Brady", 
+    "Kevin Durant",
+    "Ndamukong Suh",
+    "Draymond Green",];//CORRECT
 
 var JavaScriptFive = 
-    ["Which of the following terms is synonymous with 'Event Bubbling'?",
-    "event listeners", 
-     "event delegation",
-    "event propogation", //CORRECT
-    "event handling"];
+    ["You've made it this far, so let's get abstract -- Shawn's mind palace is...",
+    "Cluttered with scraps of half-written papers", 
+    "Matrix computer code scrolling down a screen",
+    "White walls, clear glass, and sunlight", //CORRECT
+    "A neon Tokyo nightscape"];
 //querySelectors
 var mainCard = document.querySelector(".card");
 var displayedTimer = document.querySelector("#displayedTimer"); 
@@ -60,6 +60,18 @@ var timesAttemptedSaved = localStorage.getItem("timesAttempted", timesAttempted)
 //Info on Sound Effects from: https://www.youtube.com/watch?v=eRTe4uaiSpc
 var correctSound = document.createElement("audio");
 var incorrectSound = document.createElement("audio");
+//
+var goodLuckSound = document.createElement("audio");
+var doSound = document.createElement("audio");
+var whySound = document.createElement("audio");
+var yeahSound = document.createElement("audio");
+var yupSound = document.createElement("audio");
+goodLuckSound.src = "./sounds/good-luck.mp3";
+doSound.src = "./sounds/do.mp3";
+whySound.src = "./sounds/why.mp3";
+yeahSound.src = "./sounds/yeah.mp3";
+yupSound.src = "./sounds/yup.mp3";
+
 correctSound.src = "./sounds/correct-sound.mp3";
 incorrectSound.src = "./sounds/incorrect-sound.mp3";
 
@@ -89,7 +101,7 @@ mainCard.addEventListener("click", function(event){
     if(clickCount === 1){
         //start up the program 
         startTimer();
-        
+        goodLuckSound.play();
         //display Question 1
         displayedQuestion.textContent = ShawnOne[0];
         displayedChoiceA.textContent = ShawnOne[1];
@@ -105,11 +117,11 @@ mainCard.addEventListener("click", function(event){
     if(clickCount === 2){
         //Was the last question correct?
         if(element.matches("#displayedChoiceA") === true){
-            correctSound.play();
+            yeahSound.play();
             userScore += 5;
             displayedCurrentScore.textContent = "Your Score: "+userScore;  
         }else{
-            incorrectSound.play();
+            doSound.play();
             timeCount -= 10; 
         }
         //displayQuestion 2 
@@ -124,11 +136,11 @@ mainCard.addEventListener("click", function(event){
     if(clickCount === 3){
         //Was the last question correct?
         if(element.matches("#displayedChoiceB") === true){
-            correctSound.play();
+            yupSound.play();
             userScore += 5;
             displayedCurrentScore.textContent = "Your Score: "+userScore;  
         }else{
-            incorrectSound.play();
+            whySound.play();
             timeCount -= 10; 
         }
 
@@ -144,11 +156,11 @@ mainCard.addEventListener("click", function(event){
     if(clickCount === 4){
         //Was the last question correct?
         if(element.matches("#displayedChoiceD") === true){
-            correctSound.play();
+            yeahSound.play();
             userScore += 5;
             displayedCurrentScore.textContent = "Your Score: "+userScore;  
         }else{
-            incorrectSound.play();
+            whySound.play();
             timeCount -= 10; 
         }
         
@@ -163,11 +175,11 @@ mainCard.addEventListener("click", function(event){
     if(clickCount === 5){
         //Was the last question correct?
         if(element.matches("#displayedChoiceD") === true){
-            correctSound.play();
+            yupSound.play();
             userScore += 5;
             displayedCurrentScore.textContent = "Your Score: "+userScore;  
         }else{
-            incorrectSound.play();
+            doSound.play();
             timeCount -= 10; 
         }
 
