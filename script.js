@@ -1,5 +1,5 @@
 //Question-Answer Arrays
-var JavaScriptOne = 
+var ShawnOne = 
     ["What keyword allows you to set a variable in Javascript?",
     "var", //CORRECT
     "make",
@@ -91,11 +91,11 @@ mainCard.addEventListener("click", function(event){
         startTimer();
         
         //display Question 1
-        displayedQuestion.textContent = JavaScriptOne[0];
-        displayedChoiceA.textContent = JavaScriptOne[1];
-        displayedChoiceB.textContent = JavaScriptOne[2];
-        displayedChoiceC.textContent = JavaScriptOne[3];
-        displayedChoiceD.textContent = JavaScriptOne[4];
+        displayedQuestion.textContent = ShawnOne[0];
+        displayedChoiceA.textContent = ShawnOne[1];
+        displayedChoiceB.textContent = ShawnOne[2];
+        displayedChoiceC.textContent = ShawnOne[3];
+        displayedChoiceD.textContent = ShawnOne[4];
 
         timesAttemptedSaved++; 
         localStorage.setItem("timesAttempted", timesAttemptedSaved++);
