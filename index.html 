@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>The Shawn Quiz!</title>
+</head>
+<body>
+    <div class="card">
+        <h1 id="displayedQuestion">The Shawn Quiz</h1>
+        <button id="startButton">Start</button>
+        <ul>
+            <li id="displayedChoiceA">
+                <button id="buttonA"> A</button>
+            </li>
+            <li id="displayedChoiceB">
+                <button id="buttonB"> B</button>
+            </li>
+            <li id="displayedChoiceC">
+                <button id="buttonC"> C</button>
+            </li>
+            <li id="displayedChoiceD">
+                <button id="buttonD"> D</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h4 id="displayedTimer"></h4>
+    </div>
+
+    <div class="score-card">
+        <h4 id="displayedHighScore"></h4>
+        <h5 id="highScoreName"></h5>
+    </div>
+    <div class="score-card">
+        <h4 id="displayedCurrentScore"></h4>
+        <h5 id="displayedTimesAttempted"></h5>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
