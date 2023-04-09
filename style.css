@@ -77,6 +77,11 @@ li button {
   width: 80vw;
 }
 
+.card img{
+  display:inline-block; 
+  max-width: 25%;
+}
+
 .score-card{
   display: inline-block;
   background-color:	#e0f9ff;
